@@ -1,0 +1,16 @@
+# 应用名称
+spring:
+  application:
+    name: excused-exam
+  datasource:
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/excused_exam?serverTimezone=Asia/Shanghai
+# 应用服务 WEB 访问端口
+server:
+  port: 8080
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.charon.excusedexam.mapper.ProMapper">
+
+    <!--这里的id与ProMapper接口中名称一一对应-->
+    <select id="selectProName" resultType="java.lang.Integer">
+        SELECT id
+        FROM product
+        WHERE pro_name = #{proName}
+    </select>
+
+    <insert id="insertProName" parameterType="com.charon.excusedexam.pojo.Product" useGeneratedKeys="true" keyProperty="id">
+        insert into product (pro_name) values (#{proName})
+    </insert>
+</mapper>
